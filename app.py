@@ -5,11 +5,12 @@ from flask import (
     render_template,
 )
 import boto3
-from botocore.exceptions import ClientError, NoCredentialsError
+from botocore.exceptions import ClientError
 import hashlib
 import time
 from wtforms import Form, StringField, validators
 from flask_limiter import Limiter
+
 
 
 app = Flask(__name__)
@@ -20,6 +21,7 @@ limiter = Limiter(
         "100 per day",
     ],
 )
+
 
 
 @limiter.request_filter
