@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>URL Hash Dashboard</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Original URL</th>
+                <th>Hashed URL</th>
+                <th>Click Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.original_url }}</td>
+                <td>{{ item.hashed_url }}</td>
+                <td>{{ item.click_count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
